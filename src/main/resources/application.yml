@@ -1,0 +1,18 @@
+---
+server:
+  port: 8888
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: nimda
+spring:
+  cloud:
+    config:
+      server:
+        git:          
+          uri: https://github.com/billatr0n/microservices-cloud-config
+          search-paths:
+            - 'Janus-configuration'
+          default-label: develop
